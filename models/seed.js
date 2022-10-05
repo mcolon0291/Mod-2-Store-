@@ -12,7 +12,7 @@ const  products = [
         image: 'https://i.pinimg.com/originals/e8/c3/7d/e8c37ddd356261b141fa81ed01a92a6b.jpg',
         price: '$500',
         qty: '8',
-        description: 'Pink Bag for Causal Outtings',
+        description: 'Pink Bag for Casual Outtings',
     },
     {
         name: 'Crocodile Bag',

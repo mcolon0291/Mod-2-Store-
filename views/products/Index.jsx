@@ -10,6 +10,9 @@ class Index extends React.Component {
             <DefaultLayout title="Purse Store">
                 
                     <h1>All Products</h1>
+                    <div id="page-container">
+                    <div id="products-index">
+
                     <ul>
                         {products.map((products)=> {
                             return (
@@ -26,9 +29,10 @@ class Index extends React.Component {
                             )
                         })}
                     </ul>
-                    
+                    </div>
+                    </div>
                     <nav>
-                       <br></br> <a href="/products/new">Create New Product</a>
+                       <br></br> <a className='back' href="/products/new">Create New Product</a>
                     </nav>
                 
             </DefaultLayout>

@@ -8,7 +8,7 @@ class Show extends React.Component {
             <DefaultLayout title={`${products.name}`}>
             <h1> Product Detail Page </h1>
             <h2> {products.name}</h2> 
-            <img style={{ height: '400px', width: '300px' }} src={products.image}/>
+            <img style={{ height: '300px', width: '300px' }} src={products.image}/>
             <h3> Description: {products.description}</h3>
             <h3>Price: {products.price}</h3>
             <h3>{products.qty > 0 ? `${products.qty} in stock` : `Out of stock`} </h3>
@@ -24,7 +24,7 @@ class Show extends React.Component {
                     <input id="buy" type="submit" value="Buy" /> : null}
                                     </form> 
             
-                     <a href={`/products/`}>Back to all Products </a>
+                     <button><a href={`/products/`}>Back to all Products </a></button>
                             
 
 

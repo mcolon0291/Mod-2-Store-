@@ -31,11 +31,6 @@ class New extends React.Component {
                                 <input type='number' id='qty' name='qty' min= '0' max= '99' placeholder='0' />
                             </p>
 
-                            {/* <p>
-                                <label htmlFor="inStock">In Stock:</label>
-                                <input type='checkbox' id='inStock' name='inStock' />
-                            </p> */}
-
                             <input type="submit" value="Submit Product"/>
                         </fieldset>
                     </form>

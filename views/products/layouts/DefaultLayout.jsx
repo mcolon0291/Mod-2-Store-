@@ -14,11 +14,9 @@ class DefaultLayout extends React.Component {
                         <a className="item title"></a>
                     </div>
                     <div className="group">
-                       <br></br> <a className="item">Home</a>
-                       
-                       <br></br> <a className="item">Shop</a>
+                       <br></br> <a className="item">Purse Store </a>
 
-                       <br></br> <a className="item">Cart</a>
+                       <br></br> <a className="item">My Cart</a>
                     </div>
                 </nav>
                 
