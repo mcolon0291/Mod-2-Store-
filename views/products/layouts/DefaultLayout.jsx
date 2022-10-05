@@ -11,12 +11,14 @@ class DefaultLayout extends React.Component {
                 <body>
                 <nav className="menu-bar">
                     <div className="group">
-                        <a className="item title">All Purses</a>
+                        <a className="item title"></a>
                     </div>
                     <div className="group">
                        <br></br> <a className="item">Home</a>
                        
                        <br></br> <a className="item">Shop</a>
+
+                       <br></br> <a className="item">Cart</a>
                     </div>
                 </nav>
                 

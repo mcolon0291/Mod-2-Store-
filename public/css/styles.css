@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding:0
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.menu-bar{
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    display: flex;
+    padding: 10px
+}

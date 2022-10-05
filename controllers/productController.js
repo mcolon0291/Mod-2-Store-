@@ -19,7 +19,7 @@ const showNewView = (req, res) => {
 
 //DELETE//
 const deleteOneProduct = (req, res) => {
-    Product.findbyIdandDelete(req.params.id, (err, deletedProducts) => {
+    Product.findByIdAndDelete(req.params.id, (err, deletedProducts) => {
         if (err) {
             res.status(400).json(err)
         }else{
@@ -30,19 +30,6 @@ const deleteOneProduct = (req, res) => {
 
 //UPDATE// 
 const updateOneProduct = (req, res) => {
-    console.log(req.body)
-    if(req.body.qty <= 0){
-        req.body.inStock = "off"
-    } else {
-        req.body.inStock = "on"
-    }
-
-    if (req.body.inStock === "on") {
-        req.body.inStock = true
-    } else {
-        req.body.inStock = false
-    }
-
     Product.findByIdAndUpdate(req.params.id, req.body, (err, foundProduct) => {
         console.log(req.body)
         if (err) {
@@ -85,7 +72,7 @@ const showEditView = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('Edit', { products: foundProduct })
+            res.status(200).render('products/Edit', { products: foundProduct })
         }
     })
 }
@@ -130,10 +117,25 @@ const showOneProduct = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('Show', { products: foundProduct })
+            res.status(200).render('products/Show', { products: foundProduct })
         }
     })
 }
 
 
-module.exports = {findAllProducts, showNewView, deleteOneProduct, updateOneProduct, createNewProduct, showEditView, seedStarterData, clearProductData, showOneProduct}
+const buyProduct = (req, res) => {
+    Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, (err, updatedProduct) => {
+        if (err) {
+            res.status(400).json(err)
+         } else {
+            res.status(200).render('products/Show', { products: updatedProduct })           
+        
+        }
+
+        })
+}
+
+
+
+
+module.exports = {findAllProducts,buyProduct, showNewView, deleteOneProduct, updateOneProduct, createNewProduct, showEditView, seedStarterData, clearProductData, showOneProduct}

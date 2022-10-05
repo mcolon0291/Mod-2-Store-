@@ -1,39 +1,36 @@
-const React = require('react');
+const React = require('react')
 const DefaultLayout = require('./layouts/DefaultLayout')
 
 class Show extends React.Component {
-    render() {
-
-        const {products} = this.props
+    render(){
+        const { products } = this.props
         return (
-            <DefaultLayout title ="Product Details">
-                
-                    <h1>{`${products.name}`}</h1>
-                        <p>{products.description}</p>
-                        <p>{products.price}</p>
-                        <p>Qty: {products.qty}</p>
-                        <h4><p>{products.inStock ? "Currently In Stock" : "Not in Stock " }</p></h4>
-                        {products.qty == 0? <button hidden>Buy</button> : <button>Buy</button>}
-
-                    <div>
-                        
-                        <form action ={`/products/${products._id}/edit`} >
-                            <input type="submit" value="Edit" />
+            <DefaultLayout title={`${products.name}`}>
+            <h1> Product Detail Page </h1>
+            <h2> {products.name}</h2> 
+            <img style={{ height: '400px', width: '300px' }} src={products.image}/>
+            <h3> Description: {products.description}</h3>
+            <h3>Price: {products.price}</h3>
+            <h3>{products.qty > 0 ? `${products.qty} in stock` : `Out of stock`} </h3>
+           <br></br> <form action ={`/products/${products._id}/edit`} >
+                            <input className='btn'  type="submit" value="Edit" />
                         </form>
+                        <br></br>
+                 <form action={`/products/${products._id}?_method=DELETE`} method="POST">
+                         <input type="submit" value="Delete" />
+                         </form>
+               <br></br> <form action={`/products/${products._id}?_method=PATCH`} method="POST">
+                             {products.qty > 0 ?
+                    <input id="buy" type="submit" value="Buy Purse " /> : null}
+                                    </form> 
+            
+                     <a href={`/products/`}>Back to all Products </a>
                             
-                
-                        <form action ={`/products/${products._id}?_method=DELETE`} method="POST">
-                            <input type="submit" value="Delete Product" />
-                        </form>
 
 
-                    <nav>
-                        <a href ='/products'>Back</a>
-                    </nav>
-               </div> 
-            </DefaultLayout>
-        )
-    }
+                     </DefaultLayout>
+              )
+
+       }
 }
-
 module.exports = Show;

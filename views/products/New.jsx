@@ -20,7 +20,7 @@ class New extends React.Component {
                             </p>
                             <p>
                                 <label htmlFor="price">Price:</label>
-                                <input type='number' step='0.01' id='price' name='price' placeholder='0.00' />
+                                <input type='number' step='0.00' id='price' name='price' placeholder='0.00' />
                             </p>
                             <p>
                                 <label htmlFor="descr">Product Description:</label>

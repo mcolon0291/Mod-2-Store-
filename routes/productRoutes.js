@@ -11,7 +11,7 @@ const Product = require('../models/product')
 const seed = require('../models/seed')
 
 //bring in all controllers//
-const {findAllProducts, showNewView, deleteOneProduct, updateOneProduct, createNewProduct, showEditView, seedStarterData, clearProductData, showOneProduct,} = require('../controllers/productController')
+const {findAllProducts, buyProduct, showNewView, deleteOneProduct, updateOneProduct, createNewProduct, showEditView, seedStarterData, clearProductData, showOneProduct,} = require('../controllers/productController')
     
 
 //INDUCES//
@@ -22,27 +22,30 @@ router.get('/', findAllProducts)
 router.get('/new',showNewView)
 
 // //setup delete route//
-// router.get('/:id', deleteOneProduct)
+router.delete('/:id', deleteOneProduct)
 
 
 // //update route//
-// // Setup "update" route
-// router.put('/:id', updateOneProduct)
+router.put('/:id', updateOneProduct)
 
 // // Setup "create" route
-// router.post('/', createNewProduct)
+router.post('/', createNewProduct)
 
 // // Setup "edit" route
-// router.get('/:id/edit', showEditView)
+router.get('/:id/edit', showEditView)
+
+
+//patch
+router.patch('/:id', buyProduct)
 
 // Setup "seed" route
 router.get('/seed', seedStarterData)
 
 // // CLEAR
-// router.get('/clear', clearProductData)
+router.get('/clear', clearProductData)
 
 // // Setup "show" route  
-// router.get('/:id', showOneProduct)
+ router.get('/:id', showOneProduct)
 
 
 module.exports = router
