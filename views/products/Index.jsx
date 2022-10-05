@@ -1,20 +1,39 @@
-const React = require('react')
+const React = require('react');
+const DefaultLayout = require('./layouts/DefaultLayout')
+
 class Index extends React.Component {
     render() {
-        return( 
-            <html>
-                <body> 
-                    <link rel = "stylesheet" href="/css/app.css"/>
-                    <h1> My Book Store </h1>
-                    <div id="box">
-                        {this.props.products.map((product, i) => }
-                        return (
-                            <div key ={i} className="book">
-                                <h2>{product.name}</h2>
-                                <a href ={`/products/${product.id}'}><img style = {{ height: '350px', width: '350px'}} src={product.img} /> </a>
-                                <h4>Price:$
-                        )
 
+        const { products } = this.props;
+
+        return (
+            <DefaultLayout title="Purse Store">
+                
+                    <h1>All Products</h1>
+                    <ul>
+                        {products.map((products)=> {
+                            return (
+                                <li key = {products._id}>
+                                    <a href={`/products/${products._id}`}>
+                                    <img src={products.image} height='400'/></a>
+                                    <br></br>
+                                    Name - {products.name}
+                                    <br></br>
+                                    Price - {products.price}
+                                    <br></br> 
+                                    Qty - {products.qty}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    
+                    <nav>
+                        <a href="/products/new">Create New Product</a>
+                    </nav>
+                
+            </DefaultLayout>
         )
     }
 }
+
+module.exports = Index;
