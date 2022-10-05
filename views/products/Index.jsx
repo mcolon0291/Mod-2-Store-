@@ -9,13 +9,16 @@ class Index extends React.Component {
         return (
             <DefaultLayout title="Purse Store">
                 
-                    <h1>All Products</h1>
+                <br></br>    <h1>All Products</h1>
                     <div id="page-container">
                     <div id="products-index">
 
                     <ul>
                         {products.map((products)=> {
                             return (
+                                <div className = 'products'>
+
+
                                 <li key = {products._id}>
                                     <a href={`/products/${products._id}`}>
                                     <img src={products.image} height='300px'/></a>
@@ -26,6 +29,7 @@ class Index extends React.Component {
                                     <br></br> 
                                     Qty - {products.qty > 0 ? `${products.qty} in stock` : `Out of Stock`}
                                 </li>
+                        </div>
                             )
                         })}
                     </ul>

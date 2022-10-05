@@ -20,15 +20,22 @@ h1{
 
 #page-container{
     display:flex;
+    justify-content: flex-start;
     flex-direction: row;
-    justify-content: center;
+    flex-direction: row; 
+    justify-content: center; 
 }
 
-#products-index{
+/* #products-index{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    /* border:none;  */
+
+.products{
+    display:inline-block;
+    
 }
