@@ -15,13 +15,13 @@ class Index extends React.Component {
                             return (
                                 <li key = {products._id}>
                                     <a href={`/products/${products._id}`}>
-                                    <img src={products.image} height='400'/></a>
+                                    <img src={products.image} height='300px'/></a>
                                     <br></br>
                                     Name - {products.name}
                                     <br></br>
                                     Price - {products.price}
                                     <br></br> 
-                                    Qty - {products.qty}
+                                    Qty - {products.qty > 0 ? `${products.qty} in stock` : `Out of Stock`}
                                 </li>
                             )
                         })}

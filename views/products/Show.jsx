@@ -21,7 +21,7 @@ class Show extends React.Component {
                          </form>
                <br></br> <form action={`/products/${products._id}?_method=PATCH`} method="POST">
                              {products.qty > 0 ?
-                    <input id="buy" type="submit" value="Buy Purse " /> : null}
+                    <input id="buy" type="submit" value="Buy" /> : null}
                                     </form> 
             
                      <a href={`/products/`}>Back to all Products </a>
