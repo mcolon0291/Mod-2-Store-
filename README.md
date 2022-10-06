@@ -8,7 +8,8 @@
 -Future Improvement 
 
 <h2> Introduction <h2>
-A simple bag website that allows you to add products, edit and delete
+
+ -A simple bag website that allows you to add products, edit and delete
 
 <h2>Technology</h2>
  
@@ -29,7 +30,7 @@ A simple bag website that allows you to add products, edit and delete
 -Description 
  <h2> Future Improvement </h2>
 
- -Styling and adapting to CSS
+ <li>Styling and adapting to CSS
  -Add a Cart and have the products export to Cart with total
- -Add more products to the website
+ -Add more products to the website<li>
  
