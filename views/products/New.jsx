@@ -16,15 +16,15 @@ class New extends React.Component {
 
                             <p>                           
                                 <label htmlFor="image">Product Image:</label>
-                                <input type='text' id='image' name='image' />
+                                <input type='text' id='productimage' name='image' />
                             </p>
                             <p>
                                 <label htmlFor="price">Price:</label>
                                 <input type='number' step='0.00' id='price' name='price' placeholder='0.00' />
                             </p>
                             <p>
-                                <label htmlFor="descr">Product Description:</label>
-                                <input type='text' id='descr' name='descr' />
+                                <label htmlFor="description">Product Description:</label>
+                                <input type='text' id='productdescription' name='description' />
                             </p>
                             <p>
                                 <label htmlFor="qty">Quantity:</label>

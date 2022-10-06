@@ -66,7 +66,7 @@ const createNewProduct = (req, res) => {
 }
 
 
-// ROUTE      GET /products/:id/edit     (edit)
+// ROUTE EDIT//
 const showEditView = (req, res) => {
     Product.findById(req.params.id, (err, foundProduct) => {
         if (err) {
@@ -77,7 +77,7 @@ const showEditView = (req, res) => {
     })
 }
 
-// ROUTE       GET /products/seed      (seed)
+// ROUTE SEED///
 const seedStarterData = (req, res) => {
     
     Product.deleteMany({}, (err, deletedProducts) => {
@@ -98,7 +98,7 @@ const seedStarterData = (req, res) => {
     })
 }
 
-//route clear
+//ROUTE CLEAR///
 const clearProductData = (req, res) => {
     Product.deleteMany({}, (err, deletedProducts) => {
         if (err) {
@@ -110,7 +110,7 @@ const clearProductData = (req, res) => {
 }
 
 
-// ROUTE  GET /products/:id     (show page)
+// ROUTE SHOW PAGE///
 const showOneProduct = (req, res) => {
 
     Product.findById(req.params.id, (err, foundProduct) => {

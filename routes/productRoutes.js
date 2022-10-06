@@ -28,20 +28,20 @@ router.delete('/:id', deleteOneProduct)
 // //update route//
 router.put('/:id', updateOneProduct)
 
-// // Setup "create" route
+// // Setup create route
 router.post('/', createNewProduct)
 
-// // Setup "edit" route
+// // Setup edit route
 router.get('/:id/edit', showEditView)
 
 
-//patch
+//patch//
 router.patch('/:id', buyProduct)
 
-// Setup "seed" route
+// Setup seed route
 router.get('/seed', seedStarterData)
 
-// // CLEAR
+// // CLEAR///
 router.get('/clear', clearProductData)
 
 // // Setup "show" route  
