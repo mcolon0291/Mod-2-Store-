@@ -32,8 +32,6 @@ CSS
  Styling and adapting to CSS
  Add a Cart and have the products export to Cart with total
  Add more products to the website
- 
-=======
 
 <h1> Purse Store </h1>
 <h2> Table of Contents </h2>
@@ -70,5 +68,4 @@ CSS
  <li>Styling and adapting to CSS
  <li>Add a Cart and have the products export to Cart with total
  <li>Add more products to the website
->>>>>>> ec715e4331ba8243d11445d97b94382124114e09
  
