@@ -7,9 +7,9 @@
 <li>Database 
 <li>Future Improvement 
 
-<h2> Introduction <h2>
+<h2> Introduction </h2>
 
- -A simple bag website that allows you to add products, edit and delete.
+ A simple bag website that allows you to add products, edit and delete.
 
 <h2>Technology</h2>
  
