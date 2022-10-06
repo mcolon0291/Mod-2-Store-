@@ -32,12 +32,12 @@ class Index extends React.Component {
                         </div>
                             )
                         })}
+
                     </ul>
+                       <button> <br></br> <a className='back' href="/products/new">Create New Product</a> </button>
                     </div>
                     </div>
-                    <nav>
-                       <br></br> <a className='back' href="/products/new">Create New Product</a>
-                    </nav>
+                     
                 
             </DefaultLayout>
         )

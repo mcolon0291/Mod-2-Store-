@@ -31,7 +31,7 @@ class New extends React.Component {
                                 <input type='number' id='qty' name='qty' min= '0' max= '99' placeholder='0' />
                             </p>
 
-                            <input type="submit" value="Submit Product"/>
+                            <input type="submit" value="Submit"/>
                         </fieldset>
                     </form>
                     <nav>

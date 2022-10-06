@@ -5,10 +5,11 @@ class Show extends React.Component {
     render(){
         const { products } = this.props
         return (
-            <DefaultLayout title={`${products.name}`}>
+            <div  className='box1'>
+            <br></br><DefaultLayout title={`${products.name}`}>
             <h1> Product Detail Page </h1>
             <h2> {products.name}</h2> 
-            <img style={{ height: '275px', width: '300px' }} src={products.image}/>
+            <img style={{ height: '300px', width: '300px' }} src={products.image}/>
             <h3> Description: {products.description}</h3>
             <h3>Price: {products.price}</h3>
             <h3>{products.qty > 0 ? `${products.qty} in stock` : `Out of stock`} </h3>
@@ -24,11 +25,11 @@ class Show extends React.Component {
                     <input id="buy" type="submit" value="Buy" /> : null}
                                     </form> 
             
-                    <br></br> <a href={`/products/`}>Back to all Products </a>
+                    <br></br> <button> <a href={`/products/`}>Back to all Products </a> </button>
                             
 
-
                      </DefaultLayout>
+                    </div>
               )
 
        }

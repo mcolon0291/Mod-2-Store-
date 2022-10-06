@@ -6,6 +6,7 @@
 h1{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    line-height: 2;
 }
 
 .menu-bar{
@@ -15,7 +16,7 @@ h1{
     font-family: 'Jost', sans-serif;
     font-size: 20px;
     display: flex;
-    padding: 10px
+    padding: 5px
 }
 
 #page-container{
@@ -26,16 +27,54 @@ h1{
     justify-content: center; 
 }
 
-/* #products-index{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    flex-wrap: wrap; 
-    /* border:none;  */
-
 .products{
     display:inline-block;
-    
+
 }
+.box1{
+    text-align: center;
+    margin:auto;
+}
+
+button{
+    font-size: 10pt;
+    padding: 3px;
+    margin-top: 25px;
+    position:absolute;
+    top:0;
+    right:0;
+    border: none;
+    color: black;
+}
+
+
+ a:focus{
+    color: inherit;
+    border: inherit;
+    outline:none;
+
+}
+
+fieldset{
+   border: 5px solid;
+   border-radius: 10px;
+    margin:0px;
+    padding:0px;
+    line-height: 30px;
+    width: 400px;
+    margin-bottom: 10px;
+
+   
+}
+
+.btn-box {
+    /* outline: 2px solid salmon; */
+    display: flex;
+    align-content: space-between;
+    gap: 20px;
+    
+  }
+  
+    
+
+
