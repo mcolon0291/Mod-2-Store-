@@ -19,15 +19,15 @@ class Edit extends React.Component {
 
                             <p>                           
                                 <label htmlFor="image">Product Image:</label>
-                                <input type='text' id='image' name='image' />
+                                <input type='text' id='productimage' name='image' defaultValue={products.image} />
                             </p>
                             <p>
                                 <label htmlFor="price">Price:</label>
                                 <input type='number' step='0.01' id='price' name='price' defaultValue={products.price} />
                             </p>
                             <p>
-                                <label htmlFor="descr">Product Description:</label>
-                                <input type='text' id='descr' name='descr' defaultValue={products.descr} />
+                                <label htmlFor="description">Product Description:</label>
+                                <input type='text' id='productdescription' name='description' defaultValue={products.description} />
                             </p>
                             <p>
                                 <label htmlFor="qty">Quantity:</label>
