@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1> Purse Store </h1>
 <h2> Table of Contents </h2>
  </ul> 
